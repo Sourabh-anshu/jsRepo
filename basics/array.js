@@ -43,9 +43,22 @@ const arr1 = arr.join()
 // console.log(arr1);
 // console.log(typeof arr1);
 
+// To make array of each character of a string 
+// console.log(Array.from("Sourabh"));
+
+// To make a array of keys or values of an Object 
+// Wrong method 
+// console.log(Array.from({name:"Anshu"}));
+
+// Right way 
+const obj = {
+    name:"Soummy"
+}
+// console.log(Object.keys(obj));
+// console.log(Object.values(obj));
 // Slicing and Splicing Method 
 // console.log(`Before ${arr}`);
-console.log("A ",arr);
+// console.log("A ",arr);
 const arr2 = arr.slice(1,3)
 // console.log(`After slice ${arr} and the sliced array value ${arr2}`);
 // console.log("B ",arr2);
@@ -54,5 +67,26 @@ const arr2 = arr.slice(1,3)
 const arr3 = arr.splice(1,4,"Deleted elements after 0")
 // console.log("C ", arr3);
 // console.log("A ",arr);
+
+arr.splice(1,1,1,2,3,4)
+// console.log(arr);
+
+
+const iplTeam = ["kkr","mi","csk","rcb"]
+const islTeam = ["mb","eb","mc","kb"]
+
+// Way to concat two or more arrays 
+const team = iplTeam.concat(islTeam)
+// console.log("Team: ",team);
+
+// Or use ...Method 
+const newTeam = [...iplTeam,...islTeam]
+// console.log("New Team: ",newTeam);
+
+// Arrays inside arrays, then how to make the elements all inside a single array 
+let a = [1,2,3,[4,5,56,43], [6,5,4,[33,22,11,66]]]
+// console.log("Before ",a);
+let newA = a.flat(Infinity)
+// console.log("After  ",newA);
 
 
