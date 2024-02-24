@@ -21,5 +21,5 @@ function hel(){
     // console.log(this.mes);
     console.log(this);
 }
-// hel()
+hel()
 
