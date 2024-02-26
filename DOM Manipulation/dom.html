@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+    <style>
+        .name{
+            background-color: black;
+            color: aqua;
+            
+        }
+    </style>
+</head>
+<body class="name">
+    <div id="full" >
+        <h1 id="first" class="dom M">DOM manipulation video tutorial</h1>
+        <p>Lorem ipsum dolor si</p>
+        <ul id="parent">
+            <li class="l-item">one</li>
+            <li class="l-item">two</li>
+            <li class="l-item">three</li>
+            <li class="l-item">four</li>
+        </ul>
+    </div>    
+</body>
+<script>
+
+    // Parent to child 
+    // const p = document.querySelector("#parent");
+    // console.log(p);
+    // console.log(p.children);
+    // for (let i= 0; i< p.children.length; i++) {
+    //     let a = p.children[i];
+        // a.style.color="orange";
+        // a.style.backgroundColor = "pink"
+        // a.bordercolor = "white"
+        // a.style.border = "5px solid"
+        // a.style.borderColor =  "aliceblue";
+        // a.style.borderWidth =  "5px";
+        // a.innerText ="hello" 
+        
+    // };
+    // p.children[2].innerText = "Tuesday"
+    // p.firstChild.style.border = "2px solid ";
+    // console.log(p.firstElementChild.innerText);
+    // console.log(p.lastElementChild.innerText);
+    
+    
+    // Child to parent as well as siblings 
+    // const c = document.querySelector(".l-item")
+    // const c = document.getElementsByClassName("l-item");
+    // console.log(c);
+    // console.log(c[0].parentElement);
+    // console.log(c[0].parentNode);
+    // c[3].parentElement.style.border = "1px solid white"
+    // c.parentNode.style.border = "1px solid green";
+    // c[2].nextElementSibling.style.color = "purple"
+    // c[3].previousElementSibling.style.color = "orange"
+    // console.log(c.previousElementSibling)
+    // console.log(c.previousSibling)
+    // console.log(c.nextSibling)
+    // console.log(c.nextElementSibling)
+
+
+    // lets try querySelectorsAll, it will work same as getElementByClassName
+        // const c = document.querySelectorAll(".l-item")
+        // c[0].parentElement.style.backgroundColor = "orange"
+    
+</script>
+</html>
