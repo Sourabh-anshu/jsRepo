@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit and Remove DOM</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: #fff;
+    }
+</style>
+<body>
+    <ul class="oList">
+        <li>C</li>
+    </ul>
+</body>
+<script>
+
+    // add 
+
+    function addListItem(listItem){
+        const li = document.createElement("li")
+        li.innerHTML = listItem
+        document.querySelector(".oList").appendChild(li) 
+    }
+    addListItem("Python")
+    addListItem("SQL")
+    // optiAddListItem("ffff")
+
+    function optiAddListItem(newItem) {
+        const li = document.createElement("li");
+        const attri = document.createAttribute("class")
+        attri.value = "cAClass"
+        li.setAttributeNode(attri)
+        li.appendChild(document.createTextNode(newItem))
+        document.querySelector('ul').appendChild(li)
+    }
+    optiAddListItem("java");
+
+
+    // Edit 
+    const l = document.querySelector("li:nth-child(4)");
+    // edit with previous values intact 
+    // l.appendChild(document.createTextNode("HTML"));
+    
+    // edit with new value replacing old value
+    // optimised way  
+    // const newLi = document.createElement("li");
+    // newLi.appendChild(document.createTextNode("CSS"))
+    // l.replaceWith(newLi)
+
+    // less optimised way 
+    const newLi = document.createElement("li");
+    // newLi.innerHTML = "Helllooooo"
+    // l.replaceWith(newLi)
+    // Or 
+    // newLi.textContent = "BYYYYEEEE"
+    // l.replaceWith(newLi)
+    // Or 
+    // l.outerHTML = "<li>outerHTML used here </li>"
+
+
+    // Delete an element 
+    const a = document.querySelector("li:last-child")
+    a.remove()
+
+</script>
+</html>
