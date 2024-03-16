@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut & clearTimeOut</title>
+</head>
+<body>
+    <h1>Sourabh Kumar Singh</h1>
+    <button id="stop">click</button>
+</body>
+<script>
+    const nameChanger = function(){
+        document.querySelector("h1").innerHTML = "Anshu Singh"
+        console.log("setTimeOut Executed");
+    }
+    const changeName = setTimeout(nameChanger,3000)
+    document.getElementById('stop').addEventListener('click',()=>{
+        clearTimeout(changeName)
+        console.log("Name change Stopped");
+    })
+</script>
+</html>

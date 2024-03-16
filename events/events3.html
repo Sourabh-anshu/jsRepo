@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval & clearInterval</title>
+</head>
+<body>
+    <h1>Sourabh Kumar Singh</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const date = new Date();
+    let stopName;
+    document.getElementById('start').addEventListener('click',()=>{
+        stopName = setInterval(namePrint,2000)
+        console.log("Started");
+    })
+    document.querySelector("#stop").addEventListener('click',()=>{
+        clearInterval(stopName)
+        console.log("Stopped");
+    })
+    const namePrint = ()=>{
+        console.log(date.getSeconds());
+    }
+</script>
+</html>
