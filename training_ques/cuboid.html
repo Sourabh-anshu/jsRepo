@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuboid</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Cuboid</h1>
+        <input type="text" id="input1" placeholder="Enter length of Cuboid(in cm)">
+        <input type="text" id="input2" placeholder="Enter heigth of Cuboid(in cm)">
+        <input type="text" id="input3" placeholder="Enter breadth of Cuboid(in cm)">
+        <button id="btn1">Calculate Volume</button>
+        <button id="btn2">Calculate T.S.A</button>
+        <button id="btn3">Calculate C.S.A</button>
+        <p id="para"></p>
+    </div>
+</body>
+<script>
+   
+    
+    document.getElementById("btn1").onclick = function(){
+        const input1 = document.getElementById("input1").value;
+    const input2 = document.getElementById("input2").value;
+    const input3 = document.getElementById("input3").value;
+        if(input1==""|| input2=="" || input3==""){
+            document.getElementById("para").style.display = "block";
+            document.getElementById("para").innerHTML = "Please enter the details correctly.";
+            return;
+        }
+        document.getElementById("para").innerHTML = parseFloat(input1)*parseFloat(input2)*parseFloat(input3)
+
+    }
+    document.getElementById("btn2").onclick = function(){
+        const input1 = document.getElementById("input1").value;
+    const input2 = document.getElementById("input2").value;
+    const input3 = document.getElementById("input3").value;
+        if(input1==""|| input2=="" || input3==""){
+            document.getElementById("para").style.display = "block";
+            document.getElementById("para").innerHTML = "Please enter the details correctly.";
+            return;
+        }
+        document.getElementById("para").innerHTML = 2*((parseFloat(input1)*parseFloat(input2))+(parseFloat(input2)*parseFloat(input3))+(parseFloat(input1)*parseFloat(input3)))
+    }
+    document.getElementById("btn3").onclick = function(){
+        const input1 = document.getElementById("input1").value;
+    const input2 = document.getElementById("input2").value;
+    const input3 = document.getElementById("input3").value;
+        if(input1==""|| input2=="" || input3==""){
+            document.getElementById("para").style.display = "block";
+            document.getElementById("para").innerHTML = "Please enter the details correctly.";
+            return;
+        }
+        document.getElementById("para").innerHTML = 2*parseFloat(input2)*(parseFloat(input1)+parseFloat(input3)); 
+    }
+</script>
+</html>
